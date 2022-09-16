@@ -25,8 +25,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-// Define callback functions for various events mongoose
-db.on("error", (err) => console.log(err.message + " is Mongodb not running?"));
-db.on("connected", () => console.log("mongo connected: ", mongo_URI));
-db.on("disconnected", () => console.log("mongo disconnected"));
