@@ -1,4 +1,4 @@
-const categorySchema = [
+const categorySeed = [
   { category: "food" },
   { category: "transport" },
   { category: "medical" },
