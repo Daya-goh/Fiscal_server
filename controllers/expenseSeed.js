@@ -8,7 +8,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-01",
       amount: 6.2,
       name: "Ah ma chi mian",
@@ -17,7 +17,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-01",
       amount: 12,
       name: "Grab",
@@ -26,7 +26,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "house",
+      category: "632560add36a1182843c1da7",
       date: "2022-07-02",
       amount: 33.3,
       name: "house",
@@ -35,7 +35,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-07-03",
       amount: 73,
       name: "books",
@@ -44,7 +44,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-03",
       amount: 5,
       name: "wanton mee",
@@ -53,7 +53,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "house",
+      category: "632560add36a1182843c1da7",
       date: "2022-07-04",
       amount: 37.95,
       name: "hair products",
@@ -62,7 +62,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-04",
       amount: 16.8,
       name: "Grab",
@@ -71,16 +71,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-05",
       amount: 13.5,
-      name: "groceries",
+      name: "food",
       description: "",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-05",
       amount: 31.3,
       name: "food",
@@ -89,7 +89,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-07-06",
       amount: 9.9,
       name: "shopping",
@@ -98,7 +98,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-06",
       amount: 4,
       name: "herbal tea",
@@ -107,7 +107,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-07",
       amount: 51.5,
       name: "food",
@@ -116,16 +116,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-07",
       amount: 29.6,
-      name: "groceries",
+      name: "food",
       description: "fairprice",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-08",
       amount: 50,
       name: "ezlink",
@@ -134,7 +134,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-10",
       amount: 10,
       name: "food",
@@ -143,7 +143,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "medical",
+      category: "632560add36a1182843c1da3",
       date: "2022-07-10",
       amount: 5.2,
       name: "medical",
@@ -152,7 +152,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-11",
       amount: 7.2,
       name: "food",
@@ -161,7 +161,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-07-11",
       amount: 49.9,
       name: "clothes",
@@ -170,7 +170,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-13",
       amount: 5.6,
       name: "food",
@@ -179,7 +179,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-13",
       amount: 7.9,
       name: "food",
@@ -188,7 +188,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-14",
       amount: 18,
       name: "grab",
@@ -197,7 +197,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-14",
       amount: 18,
       name: "grab",
@@ -206,7 +206,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "personal care",
+      category: "632560add36a1182843c1da5",
       date: "2022-07-14",
       amount: 69.2,
       name: "cosmetics",
@@ -215,7 +215,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-15",
       amount: 27,
       name: "grab",
@@ -224,7 +224,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-16",
       amount: 83.9,
       name: "grab",
@@ -233,7 +233,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-07-17",
       amount: 29.5,
       name: "shopping",
@@ -242,7 +242,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "gifts",
+      category: "632560add36a1182843c1da6",
       date: "2022-07-18",
       amount: 29.5,
       name: "present",
@@ -251,7 +251,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-18",
       amount: 9.5,
       name: "food",
@@ -260,7 +260,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-19",
       amount: 15.5,
       name: "food",
@@ -269,7 +269,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-07-20",
       amount: 69.9,
       name: "clothes",
@@ -278,7 +278,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-07-20",
       amount: 40.9,
       name: "vitamins",
@@ -287,7 +287,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-21",
       amount: 3.5,
       name: "food",
@@ -296,7 +296,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-21",
       amount: 7.5,
       name: "food",
@@ -305,7 +305,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "medical",
+      category: "632560add36a1182843c1da3",
       date: "2022-07-22",
       amount: 79,
       name: "medical",
@@ -314,7 +314,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-23",
       amount: 5.5,
       name: "food",
@@ -323,7 +323,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-24",
       amount: 18,
       name: "grab",
@@ -332,7 +332,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-24",
       amount: 4.1,
       name: "food",
@@ -341,7 +341,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-25",
       amount: 8.1,
       name: "food",
@@ -350,7 +350,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "house",
+      category: "632560add36a1182843c1da7",
       date: "2022-07-26",
       amount: 28.1,
       name: "house",
@@ -359,7 +359,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-27",
       amount: 83.1,
       name: "food",
@@ -368,7 +368,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-07-27",
       amount: 9,
       name: "grab",
@@ -377,16 +377,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-29",
       amount: 15,
-      name: "groceries",
+      name: "food",
       description: "fairprice",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-30",
       amount: 7.3,
       name: "food",
@@ -395,7 +395,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-07-30",
       amount: 6.0,
       name: "food",
@@ -404,7 +404,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "personal care",
+      category: "632560add36a1182843c1da5",
       date: "2022-07-31",
       amount: 19.9,
       name: "personal care",
@@ -413,7 +413,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-02",
       amount: 1.6,
       name: "Big Pau",
@@ -422,7 +422,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-09-03",
       amount: 6.8,
       name: "Mala Tang Noodles",
@@ -431,7 +431,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-03",
       amount: 20.25,
       name: "Grilled Saba Fish Set",
@@ -440,7 +440,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-09-04",
       amount: 5.8,
       name: "Chips",
@@ -449,7 +449,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-04",
       amount: 1.6,
       name: "Big Pau",
@@ -458,7 +458,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-05",
       amount: 1.6,
       name: "Big Pau",
@@ -467,7 +467,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-05",
       amount: 10.9,
       name: "Korean Bibimbap",
@@ -476,7 +476,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-06",
       amount: 1.5,
       name: "Plain Waffle",
@@ -485,7 +485,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-06",
       amount: 1.5,
       name: "Teh Peng",
@@ -494,7 +494,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-09",
       amount: 1.5,
       name: "Teh Peng",
@@ -503,7 +503,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-10",
       amount: 1.6,
       name: "Big Pau",
@@ -512,7 +512,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-11",
       amount: 1.3,
       name: "Teh",
@@ -521,7 +521,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-12",
       amount: 1.5,
       name: "Plain Waffle",
@@ -530,7 +530,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-12",
       amount: 6.8,
       name: "Congee",
@@ -539,7 +539,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-13",
       amount: 1.5,
       name: "Plain Waffle",
@@ -548,7 +548,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-13",
       amount: 3.6,
       name: "Cai Png",
@@ -557,7 +557,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-09-14",
       amount: 31.5,
       name: "Hotpot Buffet",
@@ -566,16 +566,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "loan",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-01",
       amount: 124.71,
-      name: "loan",
-      description: "sharon wanted to loan",
+      name: "others",
+      description: "sharon wanted to others",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-08-01",
       amount: 150.91,
       name: "dinner",
@@ -584,7 +584,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-01",
       amount: 183.98,
       name: "shopping",
@@ -593,7 +593,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-08-02",
       amount: 183.98,
       name: "date with wife",
@@ -602,7 +602,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-03",
       amount: 232.25,
       name: "borrow Sharon",
@@ -611,7 +611,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-04",
       amount: 782.05,
       name: "brought family to zoo",
@@ -620,7 +620,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-04",
       amount: 782.05,
       name: "brought family to zoo",
@@ -629,7 +629,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-05",
       amount: 336.36,
       name: "bills",
@@ -638,7 +638,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-06",
       amount: 122.71,
       name: "shopping",
@@ -647,7 +647,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-07",
       amount: 311.91,
       name: "plumbing",
@@ -656,16 +656,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-08",
       amount: 311.91,
-      name: "groceries",
+      name: "food",
       description: "ntuc",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-08-08",
       amount: 129.14,
       name: "grab",
@@ -674,16 +674,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-08-09",
       amount: 169.33,
-      name: "groceries",
+      name: "food",
       description: "ntuc",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-08-10",
       amount: 115.04,
       name: "JB shopping",
@@ -692,7 +692,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-08-10",
       amount: 180.37,
       name: "carpentry",
@@ -701,7 +701,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-08-11",
       amount: 1911.18,
       name: "new rims",
@@ -710,7 +710,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-11",
       amount: 119.55,
       name: "bills",
@@ -719,16 +719,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-12",
       amount: 119.55,
-      name: "groceries",
+      name: "food",
       description: "ntuc",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "medical",
+      category: "632560add36a1182843c1da3",
       date: "2022-08-13",
       amount: 172.93,
       name: "medical checkup",
@@ -737,7 +737,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-13",
       amount: 118.16,
       name: "car workshop",
@@ -746,7 +746,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "medical",
+      category: "632560add36a1182843c1da3",
       date: "2022-08-14",
       amount: 152.44,
       name: "vet appointment",
@@ -755,7 +755,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "medical",
+      category: "632560add36a1182843c1da3",
       date: "2022-08-15",
       amount: 465.86,
       name: "brought family to zoo",
@@ -764,7 +764,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "personal care",
+      category: "632560add36a1182843c1da5",
       date: "2022-08-15",
       amount: 167.58,
       name: "skill upgrading course",
@@ -773,7 +773,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "personal care",
+      category: "632560add36a1182843c1da5",
       date: "2022-08-16",
       amount: 243.18,
       name: "carpentry",
@@ -782,16 +782,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-17",
       amount: 188.33,
-      name: "groceries",
+      name: "food",
       description: "ntuc",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "personal care",
+      category: "632560add36a1182843c1da5",
       date: "2022-08-19",
       amount: 108.92,
       name: "skill upgrading course",
@@ -800,7 +800,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-08-20",
       amount: 108.92,
       name: "dinner",
@@ -809,7 +809,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-20",
       amount: 142.33,
       name: "new phone",
@@ -818,7 +818,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "transport",
+      category: "632560add36a1182843c1da2",
       date: "2022-08-20",
       amount: 50.0,
       name: "grab",
@@ -827,7 +827,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "gifts",
+      category: "632560add36a1182843c1da6",
       date: "2022-08-20",
       amount: 146.37,
       name: "bought presents",
@@ -836,7 +836,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-21",
       amount: 113.95,
       name: "shopping",
@@ -845,7 +845,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-22",
       amount: 10.66,
       name: "rent DVD",
@@ -854,7 +854,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-22",
       amount: 160.98,
       name: "levis",
@@ -863,7 +863,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-23",
       amount: 102.97,
       name: "rental",
@@ -872,16 +872,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "household",
+      category: "632560add36a1182843c1da7",
       date: "2022-08-24",
       amount: 126.22,
-      name: "groceries",
+      name: "food",
       description: "ntuc",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-24",
       amount: 391.41,
       name: "3d printer rental",
@@ -890,7 +890,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "medical",
+      category: "632560add36a1182843c1da3",
       date: "2022-08-25",
       amount: 183.51,
       name: "medical checkup",
@@ -899,7 +899,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-26",
       amount: 136.33,
       name: "new turbo for car",
@@ -908,7 +908,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-27",
       amount: 613.18,
       name: "parents allowance",
@@ -917,7 +917,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-28",
       amount: 355.98,
       name: "Challenger",
@@ -926,7 +926,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "others",
+      category: "632560add36a1182843c1da8",
       date: "2022-08-29",
       amount: 169.01,
       name: "car workshop",
@@ -935,16 +935,16 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "groceries",
+      category: "632560add36a1182843c1da1",
       date: "2022-08-29",
       amount: 129.3,
-      name: "groceries",
+      name: "food",
       description: "ntuc",
     },
     {
       user_id: "",
       budget_id: "",
-      category: "food",
+      category: "632560add36a1182843c1da1",
       date: "2022-08-30",
       amount: 738.31,
       name: "dinner date",
@@ -953,7 +953,7 @@ router.get("/seed", async (req, res) => {
     {
       user_id: "",
       budget_id: "",
-      category: "shopping",
+      category: "632560add36a1182843c1da4",
       date: "2022-08-31",
       amount: 899.0,
       name: "lg ultrafine monitor",

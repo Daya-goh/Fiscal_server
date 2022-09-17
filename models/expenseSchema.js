@@ -5,7 +5,7 @@ const expenseSchema = new Schema({
   // add your code here to set up your schema
   user_id: String,
   budget_id: String,
-  category: String,
+  category: { type: mongoose.Schema.Types.ObjectId, ref: "Category" },
   date: Date,
   amount: Number,
   name: String,

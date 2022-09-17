@@ -8,6 +8,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 // const <schema file name> = require("<path to schema>");
 const ExpenseSeedController = require("./controllers/expenseSeed");
+const CategorySeedController = require("./controllers/categorySeed");
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -20,7 +21,7 @@ mongoose.connection.once("open", () => {
 app.use(cors());
 app.use(express.json());
 app.use("/expense", ExpenseSeedController);
-
+app.use("/category", CategorySeedController);
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
   res.status(200).send("Hi World!");
