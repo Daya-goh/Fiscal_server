@@ -979,6 +979,12 @@ router.post("/", async (req, res) => {
   // res.send("new expense added");
 });
 
+/* ------------------------- get expenses ------------------------- */
+
+router.get("/all", (req, res) => {
+  res.send("all");
+});
+
 module.exports = router;
 
 //const ExpenseSeedController = require("./controllers/expenseSeed");
