@@ -7,8 +7,9 @@ const cors = require("cors");
 
 const mongoose = require("mongoose");
 // const <schema file name> = require("<path to schema>");
-const ExpenseSeedController = require("./controllers/expenseSeed");
-const CategorySeedController = require("./controllers/categorySeed");
+const ExpenseRoute = require("./controllers/expenseSeed");
+const CategoryRoute = require("./controllers/categorySeed");
+const TransactionRoute = require("./controllers/transaction");
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -20,8 +21,9 @@ mongoose.connection.once("open", () => {
 // all middleware -> app.use
 app.use(cors());
 app.use(express.json());
-app.use("/expense", ExpenseSeedController);
-app.use("/category", CategorySeedController);
+app.use("/expense", ExpenseRoute);
+app.use("/category", CategoryRoute);
+app.use("/transactions", TransactionRoute);
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
   res.status(200).send("Hi World!");

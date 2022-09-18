@@ -1,8 +1,8 @@
 const express = require("express");
 const Category = require("../models/categorySchema");
-
 const router = express.Router();
 
+/* ------------------------- category seed ------------------------ */
 // router.get("/seed", async (req, res) => {
 //   const categoryData = [
 //     { category: "Food" },
