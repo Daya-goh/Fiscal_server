@@ -981,8 +981,14 @@ router.post("/", async (req, res) => {
 
 /* ------------------------- get expenses ------------------------- */
 
-router.get("/all", (req, res) => {
-  res.send("all");
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  const targetExpense = await Expense.findById(id);
+  if (targetExpense === null) {
+    res.status(404).send({ msg: "expense not found" });
+  } else {
+    res.status(200).send(targetExpense);
+  }
 });
 
 module.exports = router;
