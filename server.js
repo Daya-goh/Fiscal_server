@@ -39,27 +39,33 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT ?? 4000;
-const cors = require("cors"); 
+const port = process.env.PORT ?? 4856;
+const cors = require("cors");
 const bcrypt = require("bcrypt"); 
-
 
 const mongoose = require("mongoose");
 // const <schema file name> = require("<path to schema>");
+const ExpenseRoute = require("./controllers/expenseSeed");
+const CategoryRoute = require("./controllers/categorySeed");
+const TransactionRoute = require("./controllers/transaction");
 
-//* Adding in userController
+
+const MONGO_URI =
+  "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
+  //* Adding in userController
   const userController = require("./controllers/UserController"); 
 const User = require("./models/UserSchema");
-
-const MONGO_URI = process.env.MONGO_URI ?? "mongodb://localhost:27017/fiscal";
 mongoose.connect(MONGO_URI);
 mongoose.connection.once("open", () => {
   console.log(`connected to mongo at ${MONGO_URI}`);
 });
 
 // all middleware -> app.use
+app.use(cors());
 app.use(express.json());
-app.use(cors()); 
+app.use("/expense", ExpenseRoute);
+app.use("/category", CategoryRoute);
+app.use("/transactions", TransactionRoute);
 app.use("/users", userController); 
 
 /* ------------------------------------------------------ */
