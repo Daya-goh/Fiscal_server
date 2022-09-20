@@ -14,6 +14,7 @@ const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
 const Budget = require("./models/budgetSchema");
 const BudgetRoute = require("./controllers/budgetSeed");
+const budgetController = require("./controllers/reBudgetSeed"); 
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -37,6 +38,7 @@ app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController);
 app.use("/budget", BudgetRoute);
+app.use("/rebudget", budgetController); 
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
