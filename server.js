@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
-const BudgetRoute = require("controllers/budgetController");
+const BudgetRoute = require("./controllers/budgetController");
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
