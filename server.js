@@ -4,22 +4,23 @@ const app = express();
 const port = process.env.PORT ?? 4856;
 const cors = require("cors");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const SECRET = process.env.SECRET; 
 
 const mongoose = require("mongoose");
 // const <schema file name> = require("<path to schema>");
 const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
-<<<<<<< HEAD
-=======
 const Budget = require("./models/budgetSchema");
->>>>>>> 79258d64466b3d14d834dcd9d6a64afc31060658
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
 //* Adding in userController
 const userController = require("./controllers/UserController");
 const User = require("./models/UserSchema");
+const analysisController = require("./controllers/AnalysisController"); 
+
 
 mongoose.connect(MONGO_URI);
 mongoose.connection.once("open", () => {
@@ -35,11 +36,30 @@ app.use("/expense", ExpenseRoute);
 app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
+app.use("/analysis", analysisController); 
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
   res.status(200).send("Hi World!");
 });
+
+const isUser = async (req, res, next) => {
+  const bearer = req.get("Authorization"); 
+  const token = bearer.split(" ")[1]; 
+
+  try {
+    const payload = jwt.verify(token, SECRET); 
+    const user = await User.findById(payload.userid); 
+
+    if( user === null ){
+      res.status(401).send("No entry")
+    } else {
+      next(); 
+    }
+  } catch (error) {
+    res.status(401).send({ error }); 
+  }
+}
 
 
 //* BudgetPage
@@ -55,7 +75,11 @@ app.post("/login", async (req, res) => {
   if (user === null) {
     res.status(401).send({ error: "No such user found." });
   } else if (bcrypt.compareSync(password, user.password)) {
-    res.status(200).send({ msg: "Login successful." });
+    const userid = user._id; 
+    const username = user.username; 
+    const payload = { userid, username }; 
+    const token = jwt.sign(payload, SECRET, { expiresIn: "24h" }); 
+    res.status(200).send({ msg: "Login successful.", token });
   } else {
     res.status(401).send({ error: "Wrong password." });
   }
