@@ -968,7 +968,7 @@ const isUser = require("./middleware");
 
 /* ---------------------- add new expense log --------------------- */
 
-router.post("/", async (req, res) => {
+router.post("/", isUser, async (req, res) => {
   const newExpense = req.body;
   console.log(newExpense);
   Expense.create(newExpense, (error, newExpense) => {
@@ -993,7 +993,7 @@ router.get("/:id", isUser, async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", isUser, async (req, res) => {
   const { id } = req.params;
   const updatedInfo = req.body;
   const targetExpense = await Expense.findByIdAndUpdate(id, updatedInfo, {
