@@ -1,12 +1,13 @@
 const express = require("express");
 const Expense = require("../models/expenseSchema");
 const router = express.Router();
+const isUser = require("./middleware");
 
 /* ----------------------- create seed data ----------------------- */
 // router.get("/seed", async (req, res) => {
 //   const expenseData = [
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-01",
@@ -15,7 +16,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-01",
@@ -24,7 +25,7 @@ const router = express.Router();
 //       description: "grab to town",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-07-02",
@@ -33,7 +34,7 @@ const router = express.Router();
 //       description: "portable vacuum, ink",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-03",
@@ -42,7 +43,7 @@ const router = express.Router();
 //       description: "kinokuniya books",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-03",
@@ -51,7 +52,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-07-04",
@@ -60,7 +61,7 @@ const router = express.Router();
 //       description: "shampoo, conditioner",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-04",
@@ -69,7 +70,7 @@ const router = express.Router();
 //       description: "grab to home from town",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-05",
@@ -78,7 +79,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-05",
@@ -87,7 +88,7 @@ const router = express.Router();
 //       description: "fishhead curry",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-06",
@@ -96,7 +97,7 @@ const router = express.Router();
 //       description: "decorative items",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-06",
@@ -105,7 +106,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-07",
@@ -114,7 +115,7 @@ const router = express.Router();
 //       description: "ichiban",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-07",
@@ -123,7 +124,7 @@ const router = express.Router();
 //       description: "fairprice",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-08",
@@ -132,7 +133,7 @@ const router = express.Router();
 //       description: "top up card",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-10",
@@ -141,7 +142,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-07-10",
@@ -150,7 +151,7 @@ const router = express.Router();
 //       description: "plaster",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-11",
@@ -159,7 +160,7 @@ const router = express.Router();
 //       description: "Macdonalds mcspicy",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-11",
@@ -168,7 +169,7 @@ const router = express.Router();
 //       description: "dress",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-13",
@@ -177,7 +178,7 @@ const router = express.Router();
 //       description: "char kway tiao",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-13",
@@ -186,7 +187,7 @@ const router = express.Router();
 //       description: "chicken rice set",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-14",
@@ -195,7 +196,7 @@ const router = express.Router();
 //       description: "grab to work",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-14",
@@ -204,7 +205,7 @@ const router = express.Router();
 //       description: "genki",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-07-14",
@@ -213,7 +214,7 @@ const router = express.Router();
 //       description: "foundation",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-15",
@@ -222,7 +223,7 @@ const router = express.Router();
 //       description: "grab to joo koon",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-16",
@@ -231,7 +232,7 @@ const router = express.Router();
 //       description: "dinner with parents",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-17",
@@ -240,7 +241,7 @@ const router = express.Router();
 //       description: "phone charger",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da6",
 //       date: "2022-07-18",
@@ -249,7 +250,7 @@ const router = express.Router();
 //       description: "bro's bday",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-18",
@@ -258,7 +259,7 @@ const router = express.Router();
 //       description: "korean food",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-19",
@@ -267,7 +268,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-20",
@@ -276,7 +277,7 @@ const router = express.Router();
 //       description: "dress",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-07-20",
@@ -285,7 +286,7 @@ const router = express.Router();
 //       description: "vit c",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-21",
@@ -294,7 +295,7 @@ const router = express.Router();
 //       description: "fishball noodles",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-21",
@@ -303,7 +304,7 @@ const router = express.Router();
 //       description: "starbucks",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-07-22",
@@ -312,7 +313,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-23",
@@ -321,7 +322,7 @@ const router = express.Router();
 //       description: "fishsoup",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-24",
@@ -330,7 +331,7 @@ const router = express.Router();
 //       description: "grab to work",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-24",
@@ -339,7 +340,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-25",
@@ -348,7 +349,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-07-26",
@@ -357,7 +358,7 @@ const router = express.Router();
 //       description: "containers",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-27",
@@ -366,7 +367,7 @@ const router = express.Router();
 //       description: "kbbq with family",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-27",
@@ -375,7 +376,7 @@ const router = express.Router();
 //       description: "grab to home",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-29",
@@ -384,7 +385,7 @@ const router = express.Router();
 //       description: "fairprice",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-30",
@@ -393,7 +394,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-30",
@@ -402,7 +403,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-07-31",
@@ -411,7 +412,7 @@ const router = express.Router();
 //       description: "bottle",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-02",
@@ -420,7 +421,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-09-03",
@@ -429,7 +430,7 @@ const router = express.Router();
 //       description: "NTUC",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-03",
@@ -438,7 +439,7 @@ const router = express.Router();
 //       description: "Fuji Izakaya Bar",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-09-04",
@@ -447,7 +448,7 @@ const router = express.Router();
 //       description: "TianMa",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-04",
@@ -456,7 +457,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-05",
@@ -465,7 +466,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-05",
@@ -474,7 +475,7 @@ const router = express.Router();
 //       description: "Tanjong Pagar MRT",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-06",
@@ -483,7 +484,7 @@ const router = express.Router();
 //       description: "Levure Naturelle",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-06",
@@ -492,7 +493,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-09",
@@ -501,7 +502,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-10",
@@ -510,7 +511,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-11",
@@ -519,7 +520,7 @@ const router = express.Router();
 //       description: "",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-12",
@@ -528,7 +529,7 @@ const router = express.Router();
 //       description: "Levure Naturelle",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-12",
@@ -537,7 +538,7 @@ const router = express.Router();
 //       description: "International Plaza",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-13",
@@ -546,7 +547,7 @@ const router = express.Router();
 //       description: "Levure Naturelle",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-13",
@@ -555,7 +556,7 @@ const router = express.Router();
 //       description: "Tanjong Pagar Plaza",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-14",
@@ -564,7 +565,7 @@ const router = express.Router();
 //       description: "Bugis",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-01",
@@ -573,7 +574,7 @@ const router = express.Router();
 //       description: "sharon wanted to others",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-01",
@@ -582,7 +583,7 @@ const router = express.Router();
 //       description: "wife needed food",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-01",
@@ -591,7 +592,7 @@ const router = express.Router();
 //       description: "bought some cloths",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-02",
@@ -600,7 +601,7 @@ const router = express.Router();
 //       description: "mbs",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-03",
@@ -609,7 +610,7 @@ const router = express.Router();
 //       description: "again she wanted to borrow",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-04",
@@ -618,7 +619,7 @@ const router = express.Router();
 //       description: "family outing",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-04",
@@ -627,7 +628,7 @@ const router = express.Router();
 //       description: "family outing",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-05",
@@ -636,7 +637,7 @@ const router = express.Router();
 //       description: "electricity",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-06",
@@ -645,7 +646,7 @@ const router = express.Router();
 //       description: "challenger",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-07",
@@ -654,7 +655,7 @@ const router = express.Router();
 //       description: "kitchen pipe leaking",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-08",
@@ -663,7 +664,7 @@ const router = express.Router();
 //       description: "ntuc",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-08",
@@ -672,7 +673,7 @@ const router = express.Router();
 //       description: "car broke down",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-09",
@@ -681,7 +682,7 @@ const router = express.Router();
 //       description: "ntuc",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-10",
@@ -690,7 +691,7 @@ const router = express.Router();
 //       description: "bought some car accesories",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-10",
@@ -699,7 +700,7 @@ const router = express.Router();
 //       description: "had to fix the ktichen cabinet",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-11",
@@ -708,7 +709,7 @@ const router = express.Router();
 //       description: "brand new car rims for the car",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-11",
@@ -717,7 +718,7 @@ const router = express.Router();
 //       description: "water bills",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-12",
@@ -726,7 +727,7 @@ const router = express.Router();
 //       description: "ntuc",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-13",
@@ -735,7 +736,7 @@ const router = express.Router();
 //       description: "eye checkup",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-13",
@@ -744,7 +745,7 @@ const router = express.Router();
 //       description: "altas workshop",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-14",
@@ -753,7 +754,7 @@ const router = express.Router();
 //       description: "brownie is sick",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-15",
@@ -762,7 +763,7 @@ const router = express.Router();
 //       description: "family outing",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-08-15",
@@ -771,7 +772,7 @@ const router = express.Router();
 //       description: "javascript for adults",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-08-16",
@@ -780,7 +781,7 @@ const router = express.Router();
 //       description: "fix the table top",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-17",
@@ -789,7 +790,7 @@ const router = express.Router();
 //       description: "ntuc",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-08-19",
@@ -798,7 +799,7 @@ const router = express.Router();
 //       description: "react for adults",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-20",
@@ -807,7 +808,7 @@ const router = express.Router();
 //       description: "steak and chips",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-20",
@@ -816,7 +817,7 @@ const router = express.Router();
 //       description: "got a new spare phone",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-20",
@@ -825,7 +826,7 @@ const router = express.Router();
 //       description: "went out for drinking",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da6",
 //       date: "2022-08-20",
@@ -834,7 +835,7 @@ const router = express.Router();
 //       description: "friends birthday party",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-21",
@@ -843,7 +844,7 @@ const router = express.Router();
 //       description: "went to vivocity",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-22",
@@ -852,7 +853,7 @@ const router = express.Router();
 //       description: "rent DVD",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-22",
@@ -861,7 +862,7 @@ const router = express.Router();
 //       description: "bought some cloths for myself",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-23",
@@ -870,7 +871,7 @@ const router = express.Router();
 //       description: "dslr camera rental",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-24",
@@ -879,7 +880,7 @@ const router = express.Router();
 //       description: "ntuc",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-24",
@@ -888,7 +889,7 @@ const router = express.Router();
 //       description: "maxis printers",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-25",
@@ -897,7 +898,7 @@ const router = express.Router();
 //       description: "robert lim medical centre",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-26",
@@ -906,7 +907,7 @@ const router = express.Router();
 //       description: "turboguage",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-27",
@@ -915,7 +916,7 @@ const router = express.Router();
 //       description: "dad needed this money for something",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-28",
@@ -924,7 +925,7 @@ const router = express.Router();
 //       description: "bought some computer accessories",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-29",
@@ -933,7 +934,7 @@ const router = express.Router();
 //       description: "altas workshop",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-29",
@@ -942,7 +943,7 @@ const router = express.Router();
 //       description: "ntuc",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-30",
@@ -951,7 +952,7 @@ const router = express.Router();
 //       description: "went out for some quiet dinner",
 //     },
 //     {
-//       user_id: "",
+//       user_id: "632607e05ab27c41dcb296d6",
 //       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-31",
@@ -969,6 +970,7 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   const newExpense = req.body;
+  console.log(newExpense);
   Expense.create(newExpense, (error, newExpense) => {
     if (error) {
       res.status(500).send({ msg: "cannot add expense" });
@@ -981,7 +983,7 @@ router.post("/", async (req, res) => {
 
 /* ------------------------- get expenses ------------------------- */
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", isUser, async (req, res) => {
   const { id } = req.params;
   const targetExpense = await Expense.findById(id);
   if (targetExpense === null) {
