@@ -7,7 +7,7 @@ const router = express.Router();
 //   const expenseData = [
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-01",
 //       amount: 6.2,
@@ -16,7 +16,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-01",
 //       amount: 12,
@@ -25,7 +25,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-07-02",
 //       amount: 33.3,
@@ -34,7 +34,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-03",
 //       amount: 73,
@@ -43,7 +43,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-03",
 //       amount: 5,
@@ -52,7 +52,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-07-04",
 //       amount: 37.95,
@@ -61,7 +61,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-04",
 //       amount: 16.8,
@@ -70,7 +70,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-05",
 //       amount: 13.5,
@@ -79,7 +79,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-05",
 //       amount: 31.3,
@@ -88,7 +88,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-06",
 //       amount: 9.9,
@@ -97,7 +97,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-06",
 //       amount: 4,
@@ -106,7 +106,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-07",
 //       amount: 51.5,
@@ -115,7 +115,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-07",
 //       amount: 29.6,
@@ -124,7 +124,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-08",
 //       amount: 50,
@@ -133,7 +133,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-10",
 //       amount: 10,
@@ -142,7 +142,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-07-10",
 //       amount: 5.2,
@@ -151,7 +151,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-11",
 //       amount: 7.2,
@@ -160,7 +160,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-11",
 //       amount: 49.9,
@@ -169,7 +169,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-13",
 //       amount: 5.6,
@@ -178,7 +178,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-13",
 //       amount: 7.9,
@@ -187,7 +187,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-14",
 //       amount: 18,
@@ -196,7 +196,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-14",
 //       amount: 18,
@@ -205,7 +205,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-07-14",
 //       amount: 69.2,
@@ -214,7 +214,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-15",
 //       amount: 27,
@@ -223,7 +223,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-16",
 //       amount: 83.9,
@@ -232,7 +232,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-17",
 //       amount: 29.5,
@@ -241,7 +241,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da6",
 //       date: "2022-07-18",
 //       amount: 29.5,
@@ -250,7 +250,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-18",
 //       amount: 9.5,
@@ -259,7 +259,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-19",
 //       amount: 15.5,
@@ -268,7 +268,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-07-20",
 //       amount: 69.9,
@@ -277,7 +277,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-07-20",
 //       amount: 40.9,
@@ -286,7 +286,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-21",
 //       amount: 3.5,
@@ -295,7 +295,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-21",
 //       amount: 7.5,
@@ -304,7 +304,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-07-22",
 //       amount: 79,
@@ -313,7 +313,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-23",
 //       amount: 5.5,
@@ -322,7 +322,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-24",
 //       amount: 18,
@@ -331,7 +331,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-24",
 //       amount: 4.1,
@@ -340,7 +340,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-25",
 //       amount: 8.1,
@@ -349,7 +349,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-07-26",
 //       amount: 28.1,
@@ -358,7 +358,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-27",
 //       amount: 83.1,
@@ -367,7 +367,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-07-27",
 //       amount: 9,
@@ -376,7 +376,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-29",
 //       amount: 15,
@@ -385,7 +385,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-30",
 //       amount: 7.3,
@@ -394,7 +394,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-07-30",
 //       amount: 6.0,
@@ -403,7 +403,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-07-31",
 //       amount: 19.9,
@@ -412,7 +412,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-02",
 //       amount: 1.6,
@@ -421,7 +421,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-09-03",
 //       amount: 6.8,
@@ -430,7 +430,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-03",
 //       amount: 20.25,
@@ -439,7 +439,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-09-04",
 //       amount: 5.8,
@@ -448,7 +448,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-04",
 //       amount: 1.6,
@@ -457,7 +457,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-05",
 //       amount: 1.6,
@@ -466,7 +466,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-05",
 //       amount: 10.9,
@@ -475,7 +475,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-06",
 //       amount: 1.5,
@@ -484,7 +484,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-06",
 //       amount: 1.5,
@@ -493,7 +493,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-09",
 //       amount: 1.5,
@@ -502,7 +502,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-10",
 //       amount: 1.6,
@@ -511,7 +511,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-11",
 //       amount: 1.3,
@@ -520,7 +520,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-12",
 //       amount: 1.5,
@@ -529,7 +529,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-12",
 //       amount: 6.8,
@@ -538,7 +538,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-13",
 //       amount: 1.5,
@@ -547,7 +547,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-13",
 //       amount: 3.6,
@@ -556,7 +556,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-09-14",
 //       amount: 31.5,
@@ -565,7 +565,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-01",
 //       amount: 124.71,
@@ -574,7 +574,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-01",
 //       amount: 150.91,
@@ -583,7 +583,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-01",
 //       amount: 183.98,
@@ -592,7 +592,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-02",
 //       amount: 183.98,
@@ -601,7 +601,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-03",
 //       amount: 232.25,
@@ -610,7 +610,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-04",
 //       amount: 782.05,
@@ -619,7 +619,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-04",
 //       amount: 782.05,
@@ -628,7 +628,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-05",
 //       amount: 336.36,
@@ -637,7 +637,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-06",
 //       amount: 122.71,
@@ -646,7 +646,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-07",
 //       amount: 311.91,
@@ -655,7 +655,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-08",
 //       amount: 311.91,
@@ -664,7 +664,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-08",
 //       amount: 129.14,
@@ -673,7 +673,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-09",
 //       amount: 169.33,
@@ -682,7 +682,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-10",
 //       amount: 115.04,
@@ -691,7 +691,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-10",
 //       amount: 180.37,
@@ -700,7 +700,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-11",
 //       amount: 1911.18,
@@ -709,7 +709,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-11",
 //       amount: 119.55,
@@ -718,7 +718,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-12",
 //       amount: 119.55,
@@ -727,7 +727,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-13",
 //       amount: 172.93,
@@ -736,7 +736,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-13",
 //       amount: 118.16,
@@ -745,7 +745,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-14",
 //       amount: 152.44,
@@ -754,7 +754,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-15",
 //       amount: 465.86,
@@ -763,7 +763,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-08-15",
 //       amount: 167.58,
@@ -772,7 +772,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-08-16",
 //       amount: 243.18,
@@ -781,7 +781,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-17",
 //       amount: 188.33,
@@ -790,7 +790,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da5",
 //       date: "2022-08-19",
 //       amount: 108.92,
@@ -799,7 +799,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-20",
 //       amount: 108.92,
@@ -808,7 +808,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-20",
 //       amount: 142.33,
@@ -817,7 +817,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da2",
 //       date: "2022-08-20",
 //       amount: 50.0,
@@ -826,7 +826,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da6",
 //       date: "2022-08-20",
 //       amount: 146.37,
@@ -835,7 +835,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-21",
 //       amount: 113.95,
@@ -844,7 +844,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-22",
 //       amount: 10.66,
@@ -853,7 +853,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-22",
 //       amount: 160.98,
@@ -862,7 +862,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-23",
 //       amount: 102.97,
@@ -871,7 +871,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da7",
 //       date: "2022-08-24",
 //       amount: 126.22,
@@ -880,7 +880,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-24",
 //       amount: 391.41,
@@ -889,7 +889,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da3",
 //       date: "2022-08-25",
 //       amount: 183.51,
@@ -898,7 +898,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-26",
 //       amount: 136.33,
@@ -907,7 +907,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-27",
 //       amount: 613.18,
@@ -916,7 +916,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-28",
 //       amount: 355.98,
@@ -925,7 +925,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da8",
 //       date: "2022-08-29",
 //       amount: 169.01,
@@ -934,7 +934,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-29",
 //       amount: 129.3,
@@ -943,7 +943,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da1",
 //       date: "2022-08-30",
 //       amount: 738.31,
@@ -952,7 +952,7 @@ const router = express.Router();
 //     },
 //     {
 //       user_id: "",
-//       budget_id: "",
+//       budget_id: "63292efb49d16c289a28e762",
 //       category: "632560add36a1182843c1da4",
 //       date: "2022-08-31",
 //       amount: 899.0,
