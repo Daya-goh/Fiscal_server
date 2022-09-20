@@ -12,7 +12,6 @@ const mongoose = require("mongoose");
 const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
-const Budget = require("./models/budgetSchema");
 const BudgetRoute = require("./controllers/budgetSeed");
 
 const MONGO_URI =
@@ -60,11 +59,6 @@ const isUser = async (req, res, next) => {
     res.status(401).send({ error });
   }
 };
-
-//* BudgetPage
-app.get("/personal/budget", (req, res) => {
-  res.status(200).send("Hi, You are now in Budget Page");
-});
 
 //* For LOGIN
 app.post("/login", async (req, res) => {

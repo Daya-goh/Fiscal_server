@@ -41,4 +41,15 @@ router.get("/active", async (req, res) => {
 
 /* ------------------------ send new budget ----------------------- */
 
+router.post("/", async (req, res) => {
+  const newBudget = req.body;
+  Budget.create(newBudget, (error, newBudget) => {
+    if (error) {
+      res.status(500).send({ msg: "cannot add budget" });
+    } else {
+      res.status(200).send(newBudget);
+    }
+  });
+});
+
 module.exports = router;
