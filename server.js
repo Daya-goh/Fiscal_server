@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
-const Budget = require("./models/budgetSchema");
+const BudgetRoute = require("controllers/budgetController");
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -31,15 +31,11 @@ app.use("/expense", ExpenseRoute);
 app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
+app.use("/budget", BudgetRoute);
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
   res.status(200).send("Hi World!");
-});
-
-//* BudgetPage
-app.get("/personal/budget", (req, res) => {
-  res.status(200).send("Hi, You are now in Budget Page");
 });
 
 //* For LOGIN
