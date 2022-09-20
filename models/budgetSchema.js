@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const budgetSchema = new mongoose.Schema({
-  user_id: "",
+  user_id: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   income: [
     {
       title: { type: String, required: true },
@@ -29,4 +29,4 @@ const Budget = mongoose.model("Budget", budgetSchema);
 
 module.exports = Budget;
 
-//{ type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" }
+//

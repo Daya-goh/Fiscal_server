@@ -5,7 +5,7 @@ const port = process.env.PORT ?? 4856;
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const SECRET = process.env.SECRET; 
+const SECRET = process.env.SECRET;
 
 const mongoose = require("mongoose");
 // const <schema file name> = require("<path to schema>");
@@ -20,8 +20,7 @@ const MONGO_URI =
 //* Adding in userController
 const userController = require("./controllers/UserController");
 const User = require("./models/UserSchema");
-const analysisController = require("./controllers/AnalysisController"); 
-
+const analysisController = require("./controllers/AnalysisController");
 
 mongoose.connect(MONGO_URI);
 mongoose.connection.once("open", () => {
@@ -36,7 +35,7 @@ app.use("/expense", ExpenseRoute);
 app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
-app.use("/analysis", analysisController); 
+app.use("/analysis", analysisController);
 app.use("/budget", BudgetRoute);
 
 /* ------------------------------------------------------ */
@@ -76,11 +75,11 @@ app.post("/login", async (req, res) => {
   if (user === null) {
     res.status(401).send({ error: "No such user found." });
   } else if (bcrypt.compareSync(password, user.password)) {
-    const userid = user._id; 
-    const username = user.username; 
-    const payload = { userid, username }; 
-    const token = jwt.sign(payload, SECRET, { expiresIn: "24h" }); 
-    res.status(200).send({ msg: "Login successful.", token });
+    const userid = user._id;
+    const username = user.username;
+    const payload = { userid, username };
+    const token = jwt.sign(payload, SECRET, { expiresIn: "24h" });
+    res.status(200).send({ msg: "Login successful.", token, userid });
   } else {
     res.status(401).send({ error: "Wrong password." });
   }
