@@ -21,10 +21,16 @@
   },
   "homepage": "https://github.com/Daya-goh/Fiscal_server#readme",
   "dependencies": {
+<<<<<<< HEAD
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
+=======
 
        "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
 
+>>>>>>> 79258d64466b3d14d834dcd9d6a64afc31060658
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "mongoose": "^6.6.1"

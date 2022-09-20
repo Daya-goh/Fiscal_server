@@ -991,6 +991,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedInfo = req.body;
+  const targetExpense = await Expense.findByIdAndUpdate(id, updatedInfo, {
+    new: true,
+  });
+  res.send(targetExpense);
+});
+
 module.exports = router;
 
 //const ExpenseSeedController = require("./controllers/expenseSeed");
