@@ -13,6 +13,8 @@ const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
 const Budget = require("./models/budgetSchema");
+const BudgetRoute = require("./controllers/budgetSeed");
+
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -27,7 +29,6 @@ mongoose.connection.once("open", () => {
   console.log(`connected to mongo at ${MONGO_URI}`);
 });
 
-
 // all middleware -> app.use
 app.use(cors());
 
@@ -37,11 +38,14 @@ app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController); 
+app.use("/budget", BudgetRoute);
+
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
   res.status(200).send("Hi World!");
 });
+
 
 const isUser = async (req, res, next) => {
   const bearer = req.get("Authorization"); 
@@ -84,7 +88,6 @@ app.post("/login", async (req, res) => {
     res.status(401).send({ error: "Wrong password." });
   }
 });
-
 
 /* ------------------------------------------------------ */
 app.listen(port, () => {
