@@ -43,6 +43,25 @@ app.get("/", (req, res) => {
   res.status(200).send("Hi World!");
 });
 
+const isUser = async (req, res, next) => {
+  const bearer = req.get("Authorization"); 
+  const token = bearer.split(" ")[1]; 
+
+  try {
+    const payload = jwt.verify(token, SECRET); 
+    const user = await User.findById(payload.userid); 
+
+    if( user === null ){
+      res.status(401).send("No entry")
+    } else {
+      next(); 
+    }
+  } catch (error) {
+    res.status(401).send({ error }); 
+  }
+}
+
+
 //* BudgetPage
 app.get("/personal/budget", (req, res) => {
   res.status(200).send("Hi, You are now in Budget Page");

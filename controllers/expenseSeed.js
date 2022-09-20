@@ -2,6 +2,7 @@ const express = require("express");
 const Expense = require("../models/expenseSchema");
 const router = express.Router();
 const isUser = require("./middleware");
+const { default: jwtDecode } = require("jwt-decode");
 
 /* ----------------------- create seed data ----------------------- */
 // router.get("/seed", async (req, res) => {
