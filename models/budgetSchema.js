@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const budgetSchema = new mongoose.Schema({
+  user_id: "",
   income: [
     {
       title: { type: String, required: true },
@@ -20,11 +21,12 @@ const budgetSchema = new mongoose.Schema({
     },
   ],
   allowance: { type: mongoose.Types.Decimal128, required: false },
-  recurring: { type: Boolean, required: true },
   active: { type: Boolean, required: true },
-  user_id: { type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" },
+  recurring: { type: Boolean, required: true },
 });
 
 const Budget = mongoose.model("Budget", budgetSchema);
 
 module.exports = Budget;
+
+//{ type: mongoose.Schema.Types.ObjectId, ref: "UserSchema" }
