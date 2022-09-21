@@ -14,7 +14,7 @@ const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
 const Budget = require("./models/budgetSchema");
 const BudgetRoute = require("./controllers/budgetSeed");
-const budgetController = require("./controllers/reBudgetSeed"); 
+const budgetController = require("./controllers/reBudgetSeed");
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -38,7 +38,7 @@ app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController);
 app.use("/budget", BudgetRoute);
-app.use("/rebudget", budgetController); 
+app.use("/rebudget", budgetController);
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
@@ -46,23 +46,22 @@ app.get("/", (req, res) => {
 });
 
 const isUser = async (req, res, next) => {
-  const bearer = req.get("Authorization"); 
-  const token = bearer.split(" ")[1]; 
+  const bearer = req.get("Authorization");
+  const token = bearer.split(" ")[1];
 
   try {
-    const payload = jwt.verify(token, SECRET); 
-    const user = await User.findById(payload.userid); 
+    const payload = jwt.verify(token, SECRET);
+    const user = await User.findById(payload.userid);
 
-    if( user === null ){
-      res.status(401).send("No entry")
+    if (user === null) {
+      res.status(401).send("No entry");
     } else {
-      next(); 
+      next();
     }
   } catch (error) {
-    res.status(401).send({ error }); 
+    res.status(401).send({ error });
   }
-}
-
+};
 
 //* BudgetPage
 app.get("/personal/budget", (req, res) => {
