@@ -1,5 +1,5 @@
 const express = require("express");
-const Budget = require("../models/budgetSchema");
+const Budget = require("./budgetSchema");
 const router = express.Router();
 
 /* ----------------------- create seed data ----------------------- */
@@ -36,8 +36,6 @@ router.get("/active", async (req, res) => {
     res.status(200).send(activeBudget);
   }
 });
-
-/* ----------------- update budget active to false ---------------- */
 
 /* ------------------------ send new budget ----------------------- */
 
