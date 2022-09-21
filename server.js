@@ -13,6 +13,7 @@ const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
 const BudgetRoute = require("./controllers/budgetSeed");
+const budgetController = require("./controllers/reBudgetSeed");
 
 const MONGO_URI =
   "mongodb+srv://adminfiscal:Passwordfiscal123!@fiscal.q0rwl6l.mongodb.net/test";
@@ -36,6 +37,7 @@ app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController);
 app.use("/budget", BudgetRoute);
+app.use("/rebudget", budgetController);
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
@@ -60,6 +62,11 @@ const isUser = async (req, res, next) => {
   }
 };
 
+//* BudgetPage
+app.get("/personal/budget", (req, res) => {
+  res.status(200).send("Hi, You are now in Budget Page");
+});
+
 //* For LOGIN
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
@@ -72,7 +79,7 @@ app.post("/login", async (req, res) => {
     const username = user.username;
     const payload = { userid, username };
     const token = jwt.sign(payload, SECRET, { expiresIn: "24h" });
-    res.status(200).send({ msg: "Login successful.", token });
+    res.status(200).send({ msg: "Login successful.", token, userid });
   } else {
     res.status(401).send({ error: "Wrong password." });
   }
