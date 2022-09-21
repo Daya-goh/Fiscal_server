@@ -12,7 +12,7 @@ const mongoose = require("mongoose");
 const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
-const BudgetRoute = require("./controllers/budgetSeed");
+// const BudgetRoute = require("./Others/budgetSeed");
 const budgetController = require("./controllers/reBudgetSeed");
 
 const MONGO_URI =
@@ -36,7 +36,7 @@ app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController);
-app.use("/budget", BudgetRoute);
+// app.use("/budget", BudgetRoute);
 app.use("/rebudget", budgetController);
 
 /* ------------------------------------------------------ */
