@@ -1006,7 +1006,7 @@ router.put("/:id", isUser, async (req, res) => {
 });
 
 /* ------------------------ delete expenses ----------------------- */
-router.delete("/:id", async (req, res) => {
+router.delete("/delete/:id", isUser, async (req, res) => {
   const { id } = req.params;
   // res.status(200).send("delete route");
   const deleteExpense = await Expense.findByIdAndDelete(id);
