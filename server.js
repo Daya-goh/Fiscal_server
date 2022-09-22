@@ -67,7 +67,7 @@ app.post("/login", async (req, res) => {
   const user = await User.findOne({ username });
 
   if (user === null) {
-    res.status(401).send({ error: "No such user found." });
+    res.status(401).send({ msg: "No such user found." });
   } else if (bcrypt.compareSync(password, user.password)) {
     const userid = user._id;
     const username = user.username;
@@ -75,7 +75,7 @@ app.post("/login", async (req, res) => {
     const token = jwt.sign(payload, SECRET, { expiresIn: "24h" });
     res.status(200).send({ msg: "Login successful.", token, userid });
   } else {
-    res.status(401).send({ error: "Wrong password." });
+    res.status(401).send({ msg: "Wrong password." });
   }
 });
 
