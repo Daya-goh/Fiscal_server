@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt"); 
+const bcrypt = require("bcrypt");
 
 const userSeed = [
   {
@@ -28,4 +28,4 @@ const userSeed = [
   },
 ];
 
-module.exports = userSeed; 
+module.exports = userSeed;
