@@ -31,30 +31,41 @@ router.get("/", isUser, async (req, res) => {
 
   var decoded = jwtDecode(token);
   console.log(decoded);
-
-  const transactionData = await Expense.find({
-    user_id: mongoose.Types.ObjectId(decoded.userid),
-  }).populate("category");
-  res.status(200).send(transactionData);
+  try {
+    const transactionData = await Expense.find({
+      user_id: mongoose.Types.ObjectId(decoded.userid),
+    }).populate("category");
+    if (transactionData === null) {
+      res.status(400).send({ msg: "cannot find expense" });
+    } else {
+      res.status(200).send(transactionData);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
+  }
 });
 
-// router.get("/", async (req, res) => {
-//   const transactionData = await Expense.find().populate("category");
-//   res.status(200).send(transactionData);
-// });
-
 router.get("/today", async (req, res) => {
-  //* Getting the token
+  //* Getting the tokenå
   const bearer = req.get("Authorization");
   const token = bearer.split(" ")[1];
   var decoded = jwtDecode(token);
   console.log(decoded);
 
-  const todayTransaction = await Expense.find({
-    user_id: mongoose.Types.ObjectId(decoded.userid),
-    date: new Date().toLocaleDateString("en-CA"),
-  });
-  res.send(todayTransaction);
+  try {
+    const todayTransaction = await Expense.find({
+      user_id: mongoose.Types.ObjectId(decoded.userid),
+      date: new Date().toLocaleDateString("en-CA"),
+    }).populate("category");
+
+    if (todayTransaction === null) {
+      res.status(400).send({ msg: "cannot find expense" });
+    } else {
+      res.status(200).send(todayTransaction);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
+  }
 });
 
 /* ------------------- get transaction by month ------------------- */
@@ -62,21 +73,27 @@ router.get("/:id", isUser, async (req, res) => {
   //* Getting the token
   const bearer = req.get("Authorization");
   const token = bearer.split(" ")[1];
-  // console.log(bearer);
-  // const userid = parseJwt(token).userid;
-  // let userObjID = new ObjectId(userid)
 
   var decoded = jwtDecode(token);
   console.log(decoded);
 
   const { id } = req.params;
   const year = getYear(new Date());
-  const transactionData = await Expense.find({
-    user_id: mongoose.Types.ObjectId(decoded.userid),
-    date: { $gte: `${year}-${id}-01`, $lte: `${year}-${id}-31` },
-  }).populate("category");
-  res.status(200).send(transactionData);
+
+  try {
+    const transactionData = await Expense.find({
+      user_id: mongoose.Types.ObjectId(decoded.userid),
+      date: { $gte: `${year}-${id}-01`, $lte: `${year}-${id}-31` },
+    }).populate("category");
+
+    if (transactionData === null) {
+      res.status(400).send({ msg: "cannot get expenses" });
+    } else {
+      res.status(200).send(transactionData);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
+  }
 });
-//expense/:id
 
 module.exports = router;
