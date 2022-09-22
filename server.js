@@ -36,12 +36,11 @@ app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController);
-// app.use("/budget", BudgetRoute);
 app.use("/rebudget", budgetController);
 
 /* ------------------------------------------------------ */
 app.get("/", (req, res) => {
-  res.status(200).send("Hi World!");
+  res.status(200).send("Welcome to Fi$cal!");
 });
 
 const isUser = async (req, res, next) => {
@@ -61,11 +60,6 @@ const isUser = async (req, res, next) => {
     res.status(401).send({ error });
   }
 };
-
-//* BudgetPage
-app.get("/personal/budget", (req, res) => {
-  res.status(200).send("Hi, You are now in Budget Page");
-});
 
 //* For LOGIN
 app.post("/login", async (req, res) => {
