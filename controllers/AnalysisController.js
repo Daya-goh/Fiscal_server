@@ -23,8 +23,10 @@ router.get("/", async (req, res) => {
     router.get("/month/:id", isUser, async (req, res) => {
       //* Getting the token 
         const bearer = req.get("Authorization"); 
+        console.log(bearer);
         const token = bearer.split(" ")[1]; 
         var decoded = jwtDecode(token); 
+        console.log(decoded);
 
     const { id } = req.params;
     const year = id.split("-")[0]; 
