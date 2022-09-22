@@ -964,21 +964,25 @@ router.get("/seed", async (req, res) => {
   ];
   Expense.deleteMany();
   const result = await Expense.insertMany(expenseData);
-  res.send(result);
+  res.status(200).send(result);
 });
 
 /* ---------------------- add new expense log --------------------- */
 
 router.post("/", isUser, async (req, res) => {
   const newExpense = req.body;
-  console.log(newExpense);
-  Expense.create(newExpense, (error, newExpense) => {
-    if (error) {
-      res.status(500).send({ msg: "cannot add expense" });
-    } else {
-      res.status(200).send(newExpense);
-    }
-  });
+
+  try {
+    Expense.create(newExpense, (error, newExpense) => {
+      if (error) {
+        res.status(500).send({ msg: "cannot add expense" });
+      } else {
+        res.status(200).send(newExpense);
+      }
+    });
+  } catch (error) {
+    res.status(500).send({ error });
+  }
   // res.send("new expense added");
 });
 
@@ -986,11 +990,16 @@ router.post("/", isUser, async (req, res) => {
 
 router.get("/:id", isUser, async (req, res) => {
   const { id } = req.params;
-  const targetExpense = await Expense.findById(id);
-  if (targetExpense === null) {
-    res.status(404).send({ msg: "expense not found" });
-  } else {
-    res.status(200).send(targetExpense);
+
+  try {
+    const targetExpense = await Expense.findById(id);
+    if (targetExpense === null) {
+      res.status(404).send({ msg: "expense not found" });
+    } else {
+      res.status(200).send(targetExpense);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
   }
 });
 
@@ -999,21 +1008,33 @@ router.get("/:id", isUser, async (req, res) => {
 router.put("/:id", isUser, async (req, res) => {
   const { id } = req.params;
   const updatedInfo = req.body;
-  const targetExpense = await Expense.findByIdAndUpdate(id, updatedInfo, {
-    new: true,
-  });
-  res.send(targetExpense);
+
+  try {
+    const targetExpense = await Expense.findByIdAndUpdate(id, updatedInfo, {
+      new: true,
+    });
+    if (targetExpense === null) {
+      res.status(400).send({ msg: "cannot update expense" });
+    } else {
+      res.status(200).send(targetExpense);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
+  }
 });
 
 /* ------------------------ delete expenses ----------------------- */
 router.delete("/delete/:id", isUser, async (req, res) => {
   const { id } = req.params;
-  // res.status(200).send("delete route");
-  const deleteExpense = await Expense.findByIdAndDelete(id);
-  if (deleteExpense === null) {
-    res.status(400).send({ msg: "cannot delete expense" });
-  } else {
-    res.status(200).send(deleteExpense);
+  try {
+    const deleteExpense = await Expense.findByIdAndDelete(id);
+    if (deleteExpense === null) {
+      res.status(400).send({ msg: "cannot delete expense" });
+    } else {
+      res.status(200).send(deleteExpense);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
   }
 });
 

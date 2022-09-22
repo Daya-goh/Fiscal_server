@@ -32,7 +32,11 @@ router.get("/", isUser, async (req, res) => {
     const budget = await Rebudget.find({
       user_id: mongoose.Types.ObjectId(decoded.userid),
     });
-    res.send(budget);
+    if (budget === null) {
+      res.status(400).send({ msg: "cannot get budget" });
+    } else {
+      res.status(200).send(budget);
+    }
   } catch (error) {
     res.status(500).send({ error });
   }
@@ -41,23 +45,36 @@ router.get("/", isUser, async (req, res) => {
 /* ----------------------- create new budget ---------------------- */
 router.post("/create", async (req, res) => {
   const newBudget = req.body;
-  Rebudget.create(newBudget, (error, newBudget) => {
-    if (error) {
-      res.status(500).send({ msg: "Fail to create budget" });
-    } else {
-      res.status(200).send(newBudget);
-    }
-  });
+
+  try {
+    Rebudget.create(newBudget, (error, newBudget) => {
+      if (error) {
+        res.status(500).send({ msg: "Fail to create budget" });
+      } else {
+        res.status(200).send(newBudget);
+      }
+    });
+  } catch (error) {
+    res.status(500).send({ error });
+  }
 });
 
 /* ----------------- update old budget to inactive ---------------- */
 router.put("/:id", async (req, res) => {
   const { id } = req.params;
   const updatedInfo = req.body;
-  const updateBudget = await Rebudget.findByIdAndUpdate(id, updatedInfo, {
-    new: true,
-  });
-  res.send(updateBudget);
+
+  try {
+    const updateBudget = await Rebudget.findByIdAndUpdate(id, updatedInfo, {
+      new: true,
+    });
+    if (updateBudget === null) {
+      res.status(400).send({ msg: "cannot update budget" });
+    }
+    res.status(200).send(updateBudget);
+  } catch (error) {
+    res.status(500).send({ error });
+  }
 });
 
 /* ----------------------- get active budget ---------------------- */
@@ -68,15 +85,18 @@ router.get("/active", async (req, res) => {
 
   var decoded = jwtDecode(token);
   console.log(decoded);
-
-  const activeBudget = await Rebudget.find({
-    user_id: mongoose.Types.ObjectId(decoded.userid),
-    active: true,
-  });
-  if (activeBudget === null) {
-    res.status(400).send({ msg: "Active budget not found" });
-  } else {
-    res.status(200).send(activeBudget);
+  try {
+    const activeBudget = await Rebudget.find({
+      user_id: mongoose.Types.ObjectId(decoded.userid),
+      active: true,
+    });
+    if (activeBudget === null) {
+      res.status(400).send({ msg: "Active budget not found" });
+    } else {
+      res.status(200).send(activeBudget);
+    }
+  } catch (error) {
+    res.status(500).send({ error });
   }
 });
 
