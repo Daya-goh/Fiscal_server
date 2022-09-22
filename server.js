@@ -12,7 +12,6 @@ const mongoose = require("mongoose");
 const ExpenseRoute = require("./controllers/expenseSeed");
 const CategoryRoute = require("./controllers/categorySeed");
 const TransactionRoute = require("./controllers/transaction");
-// const BudgetRoute = require("./Others/budgetSeed");
 const budgetController = require("./controllers/reBudgetSeed");
 
 const MONGO_URI =

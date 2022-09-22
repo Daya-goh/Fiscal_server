@@ -994,6 +994,8 @@ router.get("/:id", isUser, async (req, res) => {
   }
 });
 
+/* ------------------------ update expenses ----------------------- */
+
 router.put("/:id", isUser, async (req, res) => {
   const { id } = req.params;
   const updatedInfo = req.body;
@@ -1001,6 +1003,18 @@ router.put("/:id", isUser, async (req, res) => {
     new: true,
   });
   res.send(targetExpense);
+});
+
+/* ------------------------ delete expenses ----------------------- */
+router.delete("/delete/:id", isUser, async (req, res) => {
+  const { id } = req.params;
+  // res.status(200).send("delete route");
+  const deleteExpense = await Expense.findByIdAndDelete(id);
+  if (deleteExpense === null) {
+    res.status(400).send({ msg: "cannot delete expense" });
+  } else {
+    res.status(200).send(deleteExpense);
+  }
 });
 
 module.exports = router;
