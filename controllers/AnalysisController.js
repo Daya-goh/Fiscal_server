@@ -7,57 +7,34 @@ const { default: mongoose } = require("mongoose");
 
 // INDEX - Get ALL expense data
 router.get("/", async (req, res) => {
-  try {
-    const expenseData = await Expense.find().populate("category");
-    if (expenseData === null) {
-      res.status(400).send({ msg: "cannot find expenses" });
-    } else {
-      res.status(200).send(expenseData);
-    }
-  } catch (error) {
-    res.status(500).send({ error });
-  }
+  const expenseData = await Expense.find().populate("category");
+  res.status(200).send(expenseData);
 });
 
 router.get("/today", async (req, res) => {
-  try {
-    const todayTransaction = await Expense.find({
-      date: new Date().toLocaleDateString("en-CA"),
-    });
-    if (todayTransaction === null) {
-      res.status(400).send({ msg: "cannot find expenses" });
-    } else {
-      res.status(200).send(todayTransaction);
-    }
-  } catch (error) {
-    res.status(500).send({ error });
-  }
+  const todayTransaction = await Expense.find({
+    date: new Date().toLocaleDateString("en-CA"),
+  });
+  res.send(todayTransaction);
 });
 
 // SHOW - Get expenses data by MONTH (for Client side "/expenses/month")
 router.get("/month/:id", isUser, async (req, res) => {
   //* Getting the token
   const bearer = req.get("Authorization");
-
+  console.log(bearer);
   const token = bearer.split(" ")[1];
   var decoded = jwtDecode(token);
+  console.log(decoded);
+
   const { id } = req.params;
   const year = id.split("-")[0];
   const month = id.split("-")[1];
-
-  try {
-    const monthData = await Expense.find({
-      user_id: mongoose.Types.ObjectId(decoded.userid),
-      date: { $gte: `${year}-${month}-01`, $lte: `${year}-${month}-31` },
-    }).populate("category");
-    if (monthData === null) {
-      res.status(400).send({ msg: "cannot find expenses by month" });
-    } else {
-      res.status(200).json(monthData);
-    }
-  } catch (error) {
-    res.status(500).send({ error });
-  }
+  const monthData = await Expense.find({
+    user_id: mongoose.Types.ObjectId(decoded.userid),
+    date: { $gte: `${year}-${month}-01`, $lte: `${year}-${month}-31` },
+  }).populate("category");
+  res.status(200).json(monthData);
 });
 
 // SHOW - Get expenses data by YEAR (for Client side "/expenses/year")
@@ -66,22 +43,13 @@ router.get("/year/:id", isUser, async (req, res) => {
   const bearer = req.get("Authorization");
   const token = bearer.split(" ")[1];
   var decoded = jwtDecode(token);
+
   const { id } = req.params;
-
-  try {
-    const yearData = await Expense.find({
-      user_id: mongoose.Types.ObjectId(decoded.userid),
-      date: { $gte: `${id}-01-01`, $lte: `${id}-12-31` },
-    }).populate("category");
-
-    if (yearData === null) {
-      res.status(400).send({ msg: "cannot find expenses by year" });
-    } else {
-      res.status(200).json(yearData);
-    }
-  } catch (error) {
-    res.status(500).send({ error });
-  }
+  const yearData = await Expense.find({
+    user_id: mongoose.Types.ObjectId(decoded.userid),
+    date: { $gte: `${id}-01-01`, $lte: `${id}-12-31` },
+  }).populate("category");
+  res.status(200).json(yearData);
 });
 
 module.exports = router;
