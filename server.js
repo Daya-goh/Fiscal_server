@@ -36,7 +36,6 @@ app.use("/category", CategoryRoute);
 app.use("/transactions", TransactionRoute);
 app.use("/users", userController);
 app.use("/analysis", analysisController);
-// app.use("/budget", BudgetRoute);
 app.use("/rebudget", budgetController);
 
 /* ------------------------------------------------------ */
