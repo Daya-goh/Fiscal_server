@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   try {
     const expenseData = await Expense.find().populate("category");
     if (expenseData === null) {
-      res.status(400).send({ msg: "cannot find expenses" });
+      res.status(400).send({ msg: "cannot get expense" });
     } else {
       res.status(200).send(expenseData);
     }
@@ -25,7 +25,7 @@ router.get("/today", async (req, res) => {
       date: new Date().toLocaleDateString("en-CA"),
     });
     if (todayTransaction === null) {
-      res.status(400).send({ msg: "cannot find expenses" });
+      res.status(400).send({ msg: "cannot get expense" });
     } else {
       res.status(200).send(todayTransaction);
     }
@@ -38,7 +38,6 @@ router.get("/today", async (req, res) => {
 router.get("/month/:id", isUser, async (req, res) => {
   //* Getting the token
   const bearer = req.get("Authorization");
-
   const token = bearer.split(" ")[1];
   var decoded = jwtDecode(token);
   const { id } = req.params;
@@ -51,7 +50,7 @@ router.get("/month/:id", isUser, async (req, res) => {
       date: { $gte: `${year}-${month}-01`, $lte: `${year}-${month}-31` },
     }).populate("category");
     if (monthData === null) {
-      res.status(400).send({ msg: "cannot find expenses by month" });
+      res.status(400).send({ msg: "cannot get expense" });
     } else {
       res.status(200).json(monthData);
     }
@@ -73,9 +72,8 @@ router.get("/year/:id", isUser, async (req, res) => {
       user_id: mongoose.Types.ObjectId(decoded.userid),
       date: { $gte: `${id}-01-01`, $lte: `${id}-12-31` },
     }).populate("category");
-
     if (yearData === null) {
-      res.status(400).send({ msg: "cannot find expenses by year" });
+      res.status(400).send({ msg: "cannot get expense" });
     } else {
       res.status(200).json(yearData);
     }
