@@ -42,23 +42,23 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to Fi$cal!");
 });
 
-const isUser = async (req, res, next) => {
-  const bearer = req.get("Authorization");
-  const token = bearer.split(" ")[1];
+// const isUser = async (req, res, next) => {
+//   const bearer = req.get("Authorization");
+//   const token = bearer.split(" ")[1];
 
-  try {
-    const payload = jwt.verify(token, SECRET);
-    const user = await User.findById(payload.userid);
+//   try {
+//     const payload = jwt.verify(token, SECRET);
+//     const user = await User.findById(payload.userid);
 
-    if (user === null) {
-      res.status(401).send("No entry");
-    } else {
-      next();
-    }
-  } catch (error) {
-    res.status(401).send({ error });
-  }
-};
+//     if (user === null) {
+//       res.status(401).send("No entry");
+//     } else {
+//       next();
+//     }
+//   } catch (error) {
+//     res.status(401).send({ error });
+//   }
+// };
 
 //* For LOGIN
 app.post("/login", async (req, res) => {
