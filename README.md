@@ -1,4 +1,4 @@
-# Fi-cal
+# Fi$cal
 
 ## Fi$cal expense tracker
 
